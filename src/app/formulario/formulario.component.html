@@ -1,0 +1,29 @@
+<mat-card [ngStyle]="{ 'background-color': 'gray', 'padding': '20px', 'max-width': '600px', 'margin': '0 auto' }">
+    <h2>Formulario</h2>
+    <form [formGroup]="formSphere">
+      <mat-form-field appearance="fill" style="width: 100%;">
+        <mat-label>Nombre</mat-label>
+        <input matInput formControlName="nombre"/>
+      </mat-form-field>
+      <mat-form-field appearance="fill" style="width: 100%;">
+        <mat-label>Apellido</mat-label>
+        <input matInput  formControlName="apellido"/>
+      </mat-form-field>
+      <mat-form-field appearance="fill" style="width: 100%;">
+        <mat-label>Edad</mat-label>
+        <input matInput  formControlName="edad"/>
+      </mat-form-field>
+
+      <div style="margin: 10px 0;">
+        <p>Educación:</p>
+        <mat-checkbox formControlName="eduTipo1">Secundario</mat-checkbox>
+        <mat-checkbox formControlName="eduTipo2">Superior</mat-checkbox>
+      </div>
+      
+      <div style="display: flex; justify-content: center; gap: 10px;">
+        <button mat-raised-button color="primary" (click)="save()">Guardar</button>
+        <button mat-raised-button color="warn" (click)="closeDialog()">Salir</button>
+      </div>
+    </form>
+  </mat-card>
+  
